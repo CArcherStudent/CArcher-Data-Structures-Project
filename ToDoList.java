@@ -31,7 +31,7 @@ public class ToDoList {
 		}
 	}
 	
-	public static task createNewTask(int created) {
+	public static task createNewTask(int created) { //creates a new task
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter a name for your task");
 		String taskName = keyboard.nextLine();
