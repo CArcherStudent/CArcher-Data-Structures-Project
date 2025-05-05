@@ -6,7 +6,7 @@ public class ToDoList {
 	public static void main(String[] args) {
 		//create the list
 		TreeSet<task> list = new TreeSet<>();
-		
+		public TreeMap<int,task> byCreated = new TreeMap<>();
 		//using this to keep track of the order tasks are added to the list
 		//make sure to iterate it by one each time a new task is added
 		int createdCount = 0;
@@ -30,7 +30,7 @@ public class ToDoList {
 			}
 		}
 	}
-	
+
 	public static task createNewTask(int created) { //creates a new task
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Please enter a name for your task");
@@ -41,6 +41,9 @@ public class ToDoList {
 		
 		task temp = new task(taskName, dueIn, created);
 		return temp;
+	}
+	public addTask(task toAdd){
+		byCreated.put(toAdd.getCreated(),toAdd);
 	}
 	public static void welcomeUser() {
 		System.out.println("Welecome to your todo list, please enter a task");
