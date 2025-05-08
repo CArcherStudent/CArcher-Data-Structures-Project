@@ -26,6 +26,7 @@ public class task implements Comparable<task>{
 		public int compareTo(task o) {
 			return o.getDue() - 0;
 		}
+		
 		public String toString(){
 			String toBeReturnedString = (created + "   " + name + "   " + due);
 			return toBeReturnedString;
@@ -36,3 +37,4 @@ public class task implements Comparable<task>{
 			created = createdIn;
 		};
 }
+
